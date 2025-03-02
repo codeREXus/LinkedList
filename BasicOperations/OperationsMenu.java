@@ -1,7 +1,7 @@
 package BasicOperations;
 
-public class OperationsMenu {
-    public static void main(String[] args) {
+public class OperationsMenu { 
+    public static void main(String[] args) throws Exception {
     Operations obj= new Operations();
     obj.addFirst(1000);
     obj.addFirst(100);
@@ -14,6 +14,10 @@ public class OperationsMenu {
     obj.addAt(0,0);
     obj.addAt(30, 4);    
     obj.display();
+    obj.getSize();
+    obj.getFirst();
+    obj.getLast();
+    obj.getAt(3);
     
     }
 }

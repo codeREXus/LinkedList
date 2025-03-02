@@ -1,5 +1,4 @@
 package BasicOperations;
-
 public class Operations {
     node head;
     node tail;
@@ -54,6 +53,40 @@ public class Operations {
             size++;
         }
     }
+    
+    public void getFirst() throws Exception{
+        if(size==0){
+            throw new Exception("LinkedList is Empty");
+        }
+        System.out.println(head.data);
+    }
+    public void getLast() throws Exception{
+        if(size==0){
+            throw new Exception("LinkedList is Empty");
+        }
+        node temp=head;
+        while(temp.next!=null){
+            temp=temp.next;
+        }
+        System.out.println(temp.data);
+    }
+    public void getAt(int k) throws Exception{
+        if(size==0){
+            throw new Exception("LinkedList is epxty");
+        }
+        if(k>size){
+            throw new Exception("Index out of bound");
+        }
+        node temp= head;
+        while(k>1){
+            k--;
+            temp=temp.next;
+        }
+        System.out.println(temp.data+" (0 based indexing)");
+    }
+    
+    
+    
     public int getSize(){
         return size;
     }
