@@ -1,4 +1,7 @@
 package BasicOperations;
+
+import org.w3c.dom.Node;
+import java.util.*;
 public class Operations {
     node head;
     node tail;
@@ -7,6 +10,34 @@ public class Operations {
         head=tail=null;
         size=0;
     }
+    public void add() {
+        boolean flag= true;
+        Scanner sc = new Scanner(System.in);
+        while(flag){
+            System.out.print("enter 0 for new data and -1 to exit ");
+            System.out.println();
+            int choice= sc.nextInt();
+            if(choice==0){
+                int data= sc.nextInt();
+                node newNode = new node(data);
+                if (head == null) {
+                    head = newNode;
+                } 
+                else {
+                    node temp = head;
+                    while (temp.next != null) {
+                        temp = temp.next;
+                    }
+                temp.next = newNode;
+                }
+            }
+            else{
+                flag=false;
+                break;
+            }
+        }
+    }
+    
     public void addFirst(int data){
         node n= new node(data);
         n.next=head;
