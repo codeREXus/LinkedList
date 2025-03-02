@@ -3,7 +3,6 @@ package BasicOperations;
 public class ReverseLinkedList {
     public static void main(String[] args) {
         Operations obj= new Operations();
-        ReverseLinkedList ll= new ReverseLinkedList();
         obj.addLast(12);
         obj.addLast(123);
         obj.addLast(1234);
