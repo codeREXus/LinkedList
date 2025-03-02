@@ -34,6 +34,31 @@ public class Operations {
         size+=1;
     }
 
+    public void addAt(int data, int k){
+        node temp = head;
+        node n = new node(data);
+        
+        if(k==0){
+            addFirst(data);
+        }
+        else if(k==size){
+            addLast(data);
+        }
+        else{
+            while(k>1){
+                k--;
+                temp=temp.next;
+            }
+            n.next=temp.next;
+            temp.next=n;
+            size++;
+        }
+    }
+    public int getSize(){
+        return size;
+    }
+
+
 
     public void display(){
         node temp= head;

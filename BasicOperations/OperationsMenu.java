@@ -11,5 +11,9 @@ public class OperationsMenu {
     obj.addLast(100);
     obj.addLast(10);
     obj.display();
+    obj.addAt(0,0);
+    obj.addAt(30, 4);    
+    obj.display();
+    
     }
 }
