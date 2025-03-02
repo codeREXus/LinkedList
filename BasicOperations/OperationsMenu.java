@@ -7,5 +7,9 @@ public class OperationsMenu {
     obj.addFirst(100);
     obj.addFirst(10);
     obj.display();
+    obj.addLast(1000);
+    obj.addLast(100);
+    obj.addLast(10);
+    obj.display();
     }
 }

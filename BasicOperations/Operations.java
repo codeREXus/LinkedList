@@ -17,13 +17,30 @@ public class Operations {
         }
         size+=1;
     }
+    public void addLast(int data){
+        node n = new node(data);
+        node temp=head;
+        if(size==0){
+            head=n;
+            tail=n;
+        }
+        else{
+        while(temp.next!=null){
+            temp=temp.next;
+        }
+        temp.next=n;
+        tail=n;
+        }
+        size+=1;
+    }
 
-    
+
     public void display(){
         node temp= head;
         while(temp!=null){
-            System.out.println(temp.data);
+            System.out.print(temp.data+"->");
             temp=temp.next;
         }
+        System.out.println();
     }
 }
