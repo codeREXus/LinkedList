@@ -18,6 +18,11 @@ public class OperationsMenu {
     obj.getFirst();
     obj.getLast();
     obj.getAt(3);
-    
+    obj.deleteFirst();
+    obj.deleteFirst();
+    obj.display();
+    obj.deleteLast();
+    obj.deleteLast();
+    obj.display();
     }
 }

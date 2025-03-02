@@ -85,7 +85,24 @@ public class Operations {
         System.out.println(temp.data+" (0 based indexing)");
     }
     
-    
+    public void deleteFirst() throws Exception{
+        if(size==0){
+            throw new Exception("LinkedList is Empty");
+        }
+        head=head.next;
+        size--;
+    }
+    public void deleteLast() throws Exception{
+        if(size==0){
+            throw new Exception("LinkeList is empty");
+        }
+        node temp = head;
+        while(temp.next.next!=null){
+            temp=temp.next;
+        }
+        temp.next=null;
+        size-=1;
+    }
     
     public int getSize(){
         return size;
