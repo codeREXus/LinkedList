@@ -103,12 +103,34 @@ public class Operations {
         temp.next=null;
         size-=1;
     }
+    public void deleteAt(int k) throws Exception{
+        if(size==0){
+            throw new Exception("Linked List is empty");
+        }
+        if(k>size){
+            throw new Exception("Index out of Bounds");
+        }
+        if(k==0){
+            deleteFirst();
+        }
+        else if(k==size){
+            deleteLast();
+        }
+        else{
+            node temp = head;
+            while(k>1){
+                temp=temp.next;
+                k-=1;
+            }
+            temp.next=temp.next.next;
+            size-=1;
+        }
+    }        
+    
     
     public int getSize(){
         return size;
     }
-
-
 
     public void display(){
         node temp= head;

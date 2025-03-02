@@ -24,5 +24,8 @@ public class OperationsMenu {
     obj.deleteLast();
     obj.deleteLast();
     obj.display();
+    obj.deleteAt(3);
+    obj.deleteAt(2);
+    obj.display();
     }
 }
