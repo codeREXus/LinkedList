@@ -9,17 +9,32 @@ public class ReverseLinkedList {
         obj.addLast(1234);
         obj.addLast(12345);
         obj.display();
-        obj.head=reverse(obj.head);
+        obj.head=reverse1(obj.head);
+        obj.display();
+        obj.head= reverse2(obj.head);
         obj.display();
     }
-    static node reverse(node head){
-            node curr= head;
+    static node reverse1(node head){
+        // recursive approach
+        node curr= head;
         if(curr.next==null || curr==null){
             return curr;
         }
-        node temp = reverse(curr.next);
+        node temp = reverse1(curr.next);
         curr.next.next=curr;
         curr.next=null;
         return temp;
+    }
+    static node reverse2(node head){
+        // itterative approach
+        node prev= null;
+        node curr= head;
+        while(curr!=null){
+            node next=curr.next;
+            curr. next = prev;
+            prev= curr;
+            curr= next;
+        }
+        return prev;
     }
 }
