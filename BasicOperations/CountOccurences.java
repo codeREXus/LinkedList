@@ -17,6 +17,7 @@ public class CountOccurences {
         int target=sc.nextInt();
         int count = frequency(target,obj.head);
         System.out.println("count is "+ count);
+        sc.close();
     }
     static int frequency(int target,node head){
         node curr= head;
