@@ -1,6 +1,5 @@
 package BasicOperations;
 
-import org.w3c.dom.Node;
 import java.util.*;
 public class Operations {
     node head;
@@ -10,7 +9,7 @@ public class Operations {
         head=tail=null;
         size=0;
     }
-    public void add() {
+    public void add() throws Exception {
         boolean flag= true;
         Scanner sc = new Scanner(System.in);
         while(flag){
@@ -31,11 +30,15 @@ public class Operations {
                 temp.next = newNode;
                 }
             }
-            else{
+            if(choice ==1){
                 flag=false;
                 break;
             }
+            else{
+                throw new Exception("Enter valid value");
+            }
         }
+        sc.close();
     }
     
     public void addFirst(int data){

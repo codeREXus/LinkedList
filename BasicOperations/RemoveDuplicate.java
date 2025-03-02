@@ -1,7 +1,7 @@
 package BasicOperations;
 
 public class RemoveDuplicate {
-    public static void main(String []args){
+    public static void main(String []args) throws Exception{
         Operations obj = new Operations();
         obj.add();
         obj.display();
