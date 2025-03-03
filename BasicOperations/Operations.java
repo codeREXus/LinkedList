@@ -30,12 +30,12 @@ public class Operations {
                 temp.next = newNode;
                 }
             }
-            if(choice ==1){
-                flag=false;
+            else 
+            if(choice ==-1){
                 break;
             }
             else{
-                throw new Exception("Enter valid value");
+                System.out.println("enter correct value");
             }
         }
         sc.close();
