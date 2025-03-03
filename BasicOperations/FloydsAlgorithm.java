@@ -12,8 +12,11 @@ public class FloydsAlgorithm {
         System.out.println(flag);
         int start= checkStart(obj.head);
         System.out.println("Start of the cycle is from: "+ start);
+        if(cycle(obj.head)){
         System.out.println(" List after removal of cycle");
+        removeCycle(obj.head);
         //obj.display();
+        }
     }
     
     static Boolean cycle(node head){
@@ -35,7 +38,7 @@ public class FloydsAlgorithm {
                 slow= slow.next;
                 fast=fast.next.next;
                 if(slow== fast){
-                    return start(head,slow, fast);                  
+                    return start(head,slow, fast );                  
                 }
             }
         }
@@ -52,5 +55,21 @@ public class FloydsAlgorithm {
             }
         }
         return res;
+    }
+    static void removeCycle(node head){
+        node slow =head, fast= head;
+        node start=null;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast= fast.next.next;
+            if(slow==fast){
+                start= slow;
+            }
+        }
+        fast= start;
+        while(fast.next!= start){
+            fast= fast.next;
+        }
+        fast.next=null;
     }
 }
